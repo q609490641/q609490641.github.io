@@ -1,37 +1,236 @@
-## Welcome to GitHub Pages
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0027)http://itzoo.info/love.html -->
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Love</title>
+        
+        <link type="text/css" rel="stylesheet" href="css/default.css">
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jscex.min.js"></script>
+        <script type="text/javascript" src="js/jscex-parser.js"></script>
+        <script type="text/javascript" src="js/jscex-jit.js"></script>
+        <script type="text/javascript" src="js/jscex-builderbase.min.js"></script>
+        <script type="text/javascript" src="js/jscex-async.min.js"></script>
+        <script type="text/javascript" src="js/jscex-async-powerpack.min.js"></script>
+        <script type="text/javascript" src="js/functions.js" charset="utf-8"></script>
+        <script type="text/javascript" src="js/love.js" charset="utf-8"></script>
 
-You can use the [editor on GitHub](https://github.com/q609490641/q609490641.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+    </head>
+    <body>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+<script>
+    var bodyfrm = ( document.compatMode.toLowerCase()=="css1compat" ) ? document.documentElement : document.body;
+    var adst = document.getElementById("ShowAD").style;
+    adst.top = ( bodyfrm.clientHeight -530-22 ) + "px";
+    adst.left =  "15px";
+    function moveR() {
+        adst.top = ( bodyfrm.scrollTop + bodyfrm.clientHeight - 530-22) + "px";
+        adst.left ="15px";
+    }
+    setInterval("moveR();", 400);
+    function closead()
+    {
+        adst.display='none';
+    }
+</script>
 
-### Markdown
+        <div id="main">
+            <div id="wrap">
+               <div id="text">
+                    <div id="code">                 
+                    <span class="say">我的爱人，我会牵着你的手，走到满头白发的那一天，</span><br>
+                    <span class="say">我会守护你生命里的精彩，并陪伴你一路精彩下去。</span><br>
+                    <span class="say">你的幸福快乐，是我一生的追求。</span><br>
+                    <span class="say">我会每一天带着笑脸，和你说早安，</span><br>
+                    <span class="say">我会每一晚与你道声晚安再入梦乡，</span><br>
+                    <span class="say">我会带你去所有你想去的地方，</span><br>
+                    <span class="say">陪你闹看你笑</span><br>
+                    <span class="say">历经你生命中所有的点点滴滴。</span><br>
+                    <span class="say">我期待这一生与你一起走过，</span><br>
+                    <span class="say">我期待与你慢慢变老</span><br>
+                    <span class="say">等我们老到哪儿也去不了，</span><br>
+                    <span class="say">还能满载着一生的幸福快乐 ！</span><br>
+                    <br>
+                    <span class="say">我会为我们的未来撑起一片天空，</span><br>
+                     <span class="say">为我们的将来担负起一生的责任，</span><br>
+                      <span class="say">愿意为你去做每一件能让你开心快乐的事。</span><br>
+                       <span class="say">所有我们经历的点点滴滴，</span><br>
+                        <span class="say">都是我们一辈子最美的回忆。</span><br>
+                         <span class="say">我愿意爱你直到老去！</span><br>
+                   <br>
+                    <span class="say"><span class="space"></span> -- Yours, wuxia2001.</span>
+                    </div>
+                </div>
+                <div id="clock-box">
+                    AA与BB在一起的
+                        <div id="clock"></div>
+                </div>
+                <canvas id="canvas" width="1100" height="680"></canvas>
+            </div>
+            <audio src="love.mp3" autoplay="autoplay"></audio>
+        </div>
+    
+    <script>
+    </script>
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+    <script>
+    (function(){
+        var canvas = $('#canvas');
 
-```markdown
-Syntax highlighted code block
+        if (!canvas[0].getContext) {
+            $("#error").show();
+            return false;
+        }
 
-# Header 1
-## Header 2
-### Header 3
+        var width = canvas.width();
+        var height = canvas.height();
+        
+        canvas.attr("width", width);
+        canvas.attr("height", height);
 
-- Bulleted
-- List
+        var opts = {
+            seed: {
+                x: width / 2 - 20,
+                color: "rgb(190, 26, 37)",
+                scale: 2
+            },
+            branch: [
+                [535, 680, 570, 250, 500, 200, 30, 100, [
+                    [540, 500, 455, 417, 340, 400, 13, 100, [
+                        [450, 435, 434, 430, 394, 395, 2, 40]
+                    ]],
+                    [550, 445, 600, 356, 680, 345, 12, 100, [
+                        [578, 400, 648, 409, 661, 426, 3, 80]
+                    ]],
+                    [539, 281, 537, 248, 534, 217, 3, 40],
+                    [546, 397, 413, 247, 328, 244, 9, 80, [
+                        [427, 286, 383, 253, 371, 205, 2, 40],
+                        [498, 345, 435, 315, 395, 330, 4, 60]
+                    ]],
+                    [546, 357, 608, 252, 678, 221, 6, 100, [
+                        [590, 293, 646, 277, 648, 271, 2, 80]
+                    ]]
+                ]] 
+            ],
+            bloom: {
+                num: 700,
+                width: 1080,
+                height: 650,
+            },
+            footer: {
+                width: 1200,
+                height: 5,
+                speed: 10,
+            }
+        }
 
-1. Numbered
-2. List
+        var tree = new Tree(canvas[0], width, height, opts);
+        var seed = tree.seed;
+        var foot = tree.footer;
+        var hold = 1;
 
-**Bold** and _Italic_ and `Code` text
+        canvas.click(function(e) {
+            var offset = canvas.offset(), x, y;
+            x = e.pageX - offset.left;
+            y = e.pageY - offset.top;
+            if (seed.hover(x, y)) {
+                hold = 0; 
+                canvas.unbind("click");
+                canvas.unbind("mousemove");
+                canvas.removeClass('hand');
+            }
+        }).mousemove(function(e){
+            var offset = canvas.offset(), x, y;
+            x = e.pageX - offset.left;
+            y = e.pageY - offset.top;
+            canvas.toggleClass('hand', seed.hover(x, y));
+        });
 
-[Link](url) and ![Image](src)
-```
+        var seedAnimate = eval(Jscex.compile("async", function () {
+            seed.draw();
+            while (hold) {
+                $await(Jscex.Async.sleep(10));
+            }
+            while (seed.canScale()) {
+                seed.scale(0.95);
+                $await(Jscex.Async.sleep(10));
+            }
+            while (seed.canMove()) {
+                seed.move(0, 2);
+                foot.draw();
+                $await(Jscex.Async.sleep(10));
+            }
+        }));
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+        var growAnimate = eval(Jscex.compile("async", function () {
+            do {
+                tree.grow();
+                $await(Jscex.Async.sleep(10));
+            } while (tree.canGrow());
+        }));
 
-### Jekyll Themes
+        var flowAnimate = eval(Jscex.compile("async", function () {
+            do {
+                tree.flower(2);
+                $await(Jscex.Async.sleep(10));
+            } while (tree.canFlower());
+        }));
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/q609490641/q609490641.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+        var moveAnimate = eval(Jscex.compile("async", function () {
+            tree.snapshot("p1", 240, 0, 610, 680);
+            while (tree.move("p1", 500, 0)) {
+                foot.draw();
+                $await(Jscex.Async.sleep(10));
+            }
+            foot.draw();
+            tree.snapshot("p2", 500, 0, 610, 680);
 
-### Support or Contact
+            canvas.parent().css("background", "url(" + tree.toDataURL('image/png') + ")");
+            canvas.css("background", "#ffe");
+            $await(Jscex.Async.sleep(300));
+            canvas.css("background", "none");
+        }));
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+        var jumpAnimate = eval(Jscex.compile("async", function () {
+            var ctx = tree.ctx;
+            while (true) {
+                tree.ctx.clearRect(0, 0, width, height);
+                tree.jump();
+                foot.draw();
+                $await(Jscex.Async.sleep(25));
+            }
+        }));
+
+        var textAnimate = eval(Jscex.compile("async", function () {
+            var together = new Date();
+            together.setFullYear(2010, 5, 8);
+            together.setHours(20);
+            together.setMinutes(20);
+            together.setSeconds(0);
+            together.setMilliseconds(0);
+
+            $("#code").show().typewriter();
+            $("#clock-box").fadeIn(500);
+            while (true) {
+                timeElapse(together);
+                $await(Jscex.Async.sleep(1000));
+            }
+        }));
+
+        var runAsync = eval(Jscex.compile("async", function () {
+            $await(seedAnimate());
+            $await(growAnimate());
+            $await(flowAnimate());
+            $await(moveAnimate());
+
+            textAnimate().start();
+
+            $await(jumpAnimate());
+        }));
+
+        runAsync().start();
+    })();
+    </script>
+
+
+
+</body></html>
